@@ -26,7 +26,7 @@ state = {
     lessons: {
         index: function() {
             md.toolbar.set('color','blue');
-            md.toolbar.querySelector('md-text').innerHTML = "Plan";
+            md.toolbar.querySelector('md-text').innerHTML = "Lecciones";
             md.fab.show();
             md.fab.set('color','purple');
             md.fab.set('image','add');

@@ -8,7 +8,7 @@ function jumpTo(e) {
 	document.querySelector('video').currentTime = e.getAttribute('data-time');
 }
 
-function openTrick(what){
+function openTrickold(what){
 	if (what) {
 		transition.status.lastMorphFrom = getEl(what);
 	} else {
