@@ -8,7 +8,20 @@ function jumpTo(e) {
 	document.querySelector('video').currentTime = e.getAttribute('data-time');
 }
 
-function openTrickold(what){
+function openTrick(what){
+	if (isMobile()) {
+		transition.morph(what,'full',function(el){
+			md.ajaxInsert(what.getAttribute('data-trick'),el,function(){
+				md.justInCase("reload");
+				state.tricks.trick();
+			});
+		});
+	} else {
+		openTrickOld(what);
+	}
+}
+
+function openTrickOld(what){
 	if (what) {
 		transition.status.lastMorphFrom = getEl(what);
 	} else {
