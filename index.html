@@ -12,24 +12,22 @@
 	<md-sidemenu>
 		<md-list md-action="ajax: md-content">
 			<md-tile md-ajax="page/progress/index.html">
-				<md-icon md-image="trending_up"></md-icon>
+				<md-icon md-image="icon:trending_up"></md-icon>
 				<md-text>Mi progreso</md-text>
 			</md-tile>
 			<md-tile  md-ajax="page/lecciones/index.html" md-ajax-callback="state.lessons.index">
-				<md-icon md-image="content_paste"></md-icon>
+				<md-icon md-image="icon:content_paste"></md-icon>
 				<md-text>Lecciones</md-text>
 			</md-tile>
 			<md-tile md-ajax="page/tricks/index.html" md-ajax-callback="state.tricks.index">
-				<md-icon md-image="android"></md-icon>
+				<md-icon md-image="icon:android"></md-icon>
 				<md-text>Trucos</md-text>
 			</md-tile>
 		</md-list>
 	</md-sidemenu>
 	<md-toolbar md-color="orange">
 		<md-row>
-			<md-icon-button md-action="custom: md.sidemenu.open">
-				<md-icon md-image="menu" md-fill="white"></md-icon>
-			</md-icon-button>
+			<md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open" md-fill="white"></md-icon-button>
 			<md-text md-font-color="white">Mi progreso</md-text>
 		</md-row>
 	</md-toolbar>
