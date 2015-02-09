@@ -15,14 +15,22 @@
 				<md-icon md-image="trending_up"></md-icon>
 				<md-text>Mi progreso</md-text>
 			</md-tile>
-			<md-tile  md-ajax="page/lecciones/index.html" md-ajax-callback="state.lessons.index">
-				<md-icon md-image="content_paste"></md-icon>
-				<md-text>Lecciones</md-text>
+			<md-tile  md-ajax="page/cursos/index.html" md-ajax-callback="state.cursos.index">
+				<md-icon md-image="class"></md-icon>
+				<md-text>Cursos</md-text>
 			</md-tile>
 			<md-tile md-ajax="page/tricks/index.html" md-ajax-callback="state.tricks.index">
 				<md-icon md-image="android"></md-icon>
 				<md-text>Trucos</md-text>
+      </md-tile>
+      <md-tile  md-ajax="page/cursos/index.html" md-ajax-callback="state.cursos.index">
+        <md-icon md-image="content_paste"></md-icon>
+        <md-text>Lecciones</md-text>
 			</md-tile>
+      <md-tile md-ajax="page/glosario/index.html" md-ajax-callback="state.glosario.index">
+        <md-icon md-image="description"></md-icon>
+        <md-text>Glosario</md-text>
+      </md-tile>
 		</md-list>
 	</md-sidemenu>
 	<md-toolbar md-color="orange">
