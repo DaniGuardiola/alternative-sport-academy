@@ -1,4 +1,4 @@
-var md = new Materializer();
+var md = new Paperkit();
 window.addEventListener('load',function(){
 	md.init();
 });
