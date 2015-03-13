@@ -1,0 +1,20 @@
+{
+  "name": "belast",
+  "version": "0.0.0",
+  "homepage": "https://github.com/DaniGuardiola/belast",
+  "authors": [
+    "DaniGuardiola <contacto@daniguardiola.me>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "paperkit": "~0.1.0",
+    "paperkit-min": "~0.1.0"
+  }
+}

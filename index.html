@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Belast Academy</title>
-  	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
-	<link rel="stylesheet" href="paperkit/paperkit.css">
-	<link rel="stylesheet" href="style.css">
-	<script src="paperkit/paperkit.js"></script>
+  <meta charset="UTF-8">
+  <title>Academy</title>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#3F51B5">
+  <link rel="icon" sizes="192x192" href="s/img/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="bower_components/paperkit/paperkit.css">
+  <script src="bower_components/paperkit/paperkit.js"></script>
 </head>
-<body md-color="grey-200">
-	<md-sidemenu>
-		<md-list md-action="ajax: md-content">
-			<md-tile md-ajax="page/progress/index.html">
-				<md-icon md-image="icon:trending_up"></md-icon>
-				<md-text>Mi progreso</md-text>
-			</md-tile>
-			<md-tile  md-ajax="page/cursos/index.html" md-ajax-callback="state.cursos.index">
-				<md-icon md-image="icon:class"></md-icon>
-				<md-text>Cursos</md-text>
-			</md-tile>
-			<md-tile md-ajax="page/tricks/index.html" md-ajax-callback="state.tricks.index">
-				<md-icon md-image="icon:android"></md-icon>
-				<md-text>Trucos</md-text>
+
+<body md-color="grey-200" md-layout>
+  <md-sidemenu>
+    <img src="s/img/account.png" style="height: auto; width: 100%;">
+    <md-list md-action="ajax: md-content">
+      <md-tile md-action="custom: b.inConstruction" md-ajax="page/progress/index.html" md-ajax-callback="state.progress.index">
+        <md-icon md-image="icon:trending_up"></md-icon>
+        <md-text>Progreso</md-text>
       </md-tile>
-      <md-tile  md-ajax="page/cursos/index.html" md-ajax-callback="state.cursos.index">
-        <md-icon md-image="icon:content_paste"></md-icon>
-        <md-text>Lecciones</md-text>
-			</md-tile>
-      <md-tile md-ajax="page/glosario/index.html" md-ajax-callback="state.glosario.index">
-        <md-icon md-image="icon:description"></md-icon>
+      <md-tile md-action="custom: b.inConstruction" md-ajax="page/tracks/index.html" md-ajax-callback="state.tracks.index">
+        <md-icon md-image="icon:class"></md-icon>
+        <md-text>Cursos</md-text>
+      </md-tile>
+      <md-tile md-font-color="purple" md-fill="purple" md-ajax="page/movements/index.html" md-ajax-callback="state.movements.index">
+        <md-icon md-image="icon:android"></md-icon>
+        <md-text>Movimientos</md-text>
+      </md-tile>
+      <md-tile md-action="custom: b.inConstruction" md-ajax="page/glossary/index.html" md-ajax-callback="state.glossary.index">
+        <md-icon md-action="custom: b.inConstruction" md-image="icon:description"></md-icon>
         <md-text>Glosario</md-text>
       </md-tile>
-		</md-list>
-	</md-sidemenu>
-	<md-toolbar md-color="orange">
-		<md-row>
-			<md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open" md-fill="white"></md-icon-button>
-			<md-text md-font-color="white">Mi progreso</md-text>
-		</md-row>
-	</md-toolbar>
-	<md-content>
-		<md-paper md-height="x15" md-width="x12">
-			<div md-color="orange-300" style="height: 300px; width: 500px"><span>TEST</div>
-		</md-paper>
-	</md-content>
+    </md-list>
+  </md-sidemenu>
+  <md-fab md-image="icon: view_list" md-color="purple" md-fill="white" md-shadow="shadow-1" md-action="custom: b.switchListGrid"></md-fab>
+  <md-toolbar md-color="purple" md-shadow="shadow-1">
+    <md-row md-type="standard" id="title-row">
+      <md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open" md-fill="white"></md-icon-button>
+      <md-text md-font-color="white">Movimientos</md-text>
+      <md-space></md-space>
+      <md-icon-button md-image="icon:search" md-action="custom: md.sidemenu.open" md-fill="white"></md-icon-button>
+      <md-icon-button md-image="icon:filter_list" md-action="custom: md.sidemenu.open" md-fill="white"></md-icon-button>
+    </md-row>
+    <md-row md-type="mini" id="tab-row">
+      <md-tabbar>
+        <md-tab>Todos</md-tab>
+        <md-tab>Completos</md-tab>
+      </md-tabbar>
+    </md-row>
+  </md-toolbar>
+  <md-content>
+  </md-content>
 
-	<script src="script.js"></script>
-	<script src="js/state.js"></script>
+  <script src="js/base.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/state.js"></script>
 </body>
+
 </html>
