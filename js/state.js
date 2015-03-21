@@ -34,7 +34,7 @@ state = {
         "lime",
         "indigo"
       ];
-      var grid = document.querySelector("body>md-content>.grid");
+      var grid = document.querySelector("body>md-content>md-pager>md-page>.grid");
       var tile = grid.querySelector(".child");
       var lastN = 0;
       var newTile, n, color;
@@ -51,12 +51,35 @@ state = {
         }
         lastN = n;
         color = colors[n];
+        newTile.setAttribute("md-color", color);
         newTile.querySelector(".layout>md-content").setAttribute("md-color", color);
         newTile.querySelector(".layout>md-toolbar md-text").textContent = "Categoría " + i;
         grid.appendChild(newTile);
       }
       md.initElement(grid);
       [].forEach.call(grid.querySelectorAll(".child"), function(tile) {
+        tile.addEventListener("click", function(e) {
+          var tile = e.currentTarget;
+          transition.morph(tile, false, function(el) {
+            md.ajaxInsert("page/movements/movement.html", el, function() {
+              md.init(el);
+            });
+          });
+        });
+      });
+
+
+
+      var list = document.querySelector("body>md-content>md-pager>md-page>.completed");
+      var listTile = list.querySelector("md-tile");
+      var newTile;
+      for (var i = 2; i <= 20; i++) {
+        newTile = listTile.cloneNode();
+        newTile.innerHTML = listTile.innerHTML;
+        list.appendChild(newTile);
+      }
+      md.initElement(list);
+      [].forEach.call(list.querySelectorAll("md-tile"), function(tile) {
         tile.addEventListener("click", function(e) {
           var tile = e.currentTarget;
           transition.morph(tile, false, function(el) {

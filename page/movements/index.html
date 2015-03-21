@@ -1,14 +1,26 @@
-<div class="grid">
-  <div class="child">
-    <md-layout class="layout" style="position: relative;">
-      <md-content md-color="blue"></md-content>
-      <md-toolbar md-color="black" style="opacity: 0.5; position: absolute; bottom: 0;">
-        <md-row md-type="standard">
-          <md-text>Categoría 1</md-text>
-          <md-space></md-space>
-          <md-icon-button md-image="icon:visibility"></md-icon-button>
-        </md-row>
-      </md-toolbar>
-    </md-layout>
-  </div>
-</div>
+<md-pager id="movements-pager">
+  <md-page>
+    <div class="grid">
+      <div class="child" md-color="blue">
+        <md-layout class="layout" style="position: relative;" md-color="white">
+          <md-content md-color="blue"></md-content>
+          <md-toolbar md-color="black" style="opacity: 0.5; position: absolute; bottom: 0;">
+            <md-row md-type="mini">
+              <md-text>Categoría 1</md-text>
+              <md-space></md-space>
+              <md-icon-button md-image="icon:visibility"></md-icon-button>
+            </md-row>
+          </md-toolbar>
+        </md-layout>
+      </div>
+    </div>
+  </md-page>
+  <md-page md-color="white">
+    <md-list class="completed">
+      <md-tile>
+        <md-icon md-image="icon:battery_charging_full"></md-icon>
+        <md-text>Movimiento extremo</md-text>
+      </md-tile>
+    </md-list>
+  </md-page>
+</md-pager>

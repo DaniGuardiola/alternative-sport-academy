@@ -37,17 +37,17 @@
       </md-tile>
     </md-list>
   </md-sidemenu>
-  <md-fab md-image="icon: view_list" md-color="purple" md-fill="white" md-shadow="shadow-1" md-action="custom: b.switchListGrid"></md-fab>
-  <md-toolbar md-color="purple" md-shadow="shadow-1">
+  <md-fab md-image="icon: view_list" md-color="deep-purple" md-fill="white" md-shadow="shadow-1" md-action="custom: b.switchListGrid"></md-fab>
+  <md-toolbar md-color="purple" md-fill="purple-900" md-shadow="shadow-1">
     <md-row md-type="standard" id="title-row">
-      <md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open" md-fill="white"></md-icon-button>
-      <md-text md-font-color="white">Movimientos</md-text>
+      <md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
+      <md-text>Movimientos</md-text>
       <md-space></md-space>
-      <md-icon-button md-image="icon:search" md-action="custom: md.sidemenu.open" md-fill="white"></md-icon-button>
-      <md-icon-button md-image="icon:filter_list" md-action="custom: md.sidemenu.open" md-fill="white"></md-icon-button>
+      <md-icon-button md-image="icon:search" md-action="custom: md.sidemenu.open"></md-icon-button>
+      <md-icon-button md-image="icon:filter_list" md-action="custom: md.sidemenu.open"></md-icon-button>
     </md-row>
     <md-row md-type="mini" id="tab-row">
-      <md-tabbar>
+      <md-tabbar md-pager="movements-pager">
         <md-tab>Todos</md-tab>
         <md-tab>Completos</md-tab>
       </md-tabbar>
